@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply tracking-wider text-textColor;
+}
+
+*:focus {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+body {
+  @apply bg-mainBg;
+}
+
+.post {
+  -webkit-box-shadow: 0 3px 12px -1px rgb(7 10 25 / 10%),
+    0 22px 27px -30px rgb(7 10 25 / 10%);
+  box-shadow: 0 3px 12px -1px rgb(7 10 25 / 10%),
+    0 22px 27px -30px rgb(7 10 25 / 10%);
+}
+
+.tag {
+  -webkit-box-shadow: 0px 2px 6px rgb(75 72 112 / 15%);
+  box-shadow: 0px 2px 6px rgb(75 72 112 / 15%);
+}
+
+.newsletter {
+  -webkit-box-shadow: 0px 0px 7px 0px rgb(0 0 0 / 7%);
+  box-shadow: 0px 0px 7px 0px rgb(0 0 0 / 7%);
+}
+
+.newsletter__input {
+  -webkit-box-shadow: 0 3px 5px -2px rgb(7 10 25 / 20%);
+  box-shadow: 0 3px 5px -2px rgb(7 10 25 / 20%);
+}
