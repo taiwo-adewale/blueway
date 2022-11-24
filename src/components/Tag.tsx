@@ -7,7 +7,10 @@ interface Props {
 
 const Tag: React.FC<Props> = ({ tag, fontSize }) => {
   return (
-    <div className="text-xs tag py-1 px-3 gap-x-1 flex items-center">
+    <a
+      href="#"
+      className="text-xs tag py-1 px-3 gap-x-1 flex items-center hover:-translate-y-0.5 transition-all duration-300"
+    >
       <span className="text-red-500 text-base">#</span>
       <span
         className="text-btnPrimary font-medium"
@@ -15,7 +18,7 @@ const Tag: React.FC<Props> = ({ tag, fontSize }) => {
       >
         {tag}
       </span>
-    </div>
+    </a>
   );
 };
 

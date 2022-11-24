@@ -19,7 +19,7 @@ const Post = () => {
         </div>
       </div>
 
-      <p className="text-sm mb-12">
+      <p className="text-sm lg:text-[15px] mb-12">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
         nostrum quidem deleniti ab, quisquam corrupti, rem facilis molestias
         alias quo inventore, hic quaerat incidunt reprehenderit debitis
@@ -33,7 +33,7 @@ const Post = () => {
 
         <div className="flex items-center gap-x-2">
           <img src={picTwo} alt="" className="w-9 h-9 rounded-full" />
-          <span className="text-xs">Jonathan Doe</span>
+          <span className="text-xs lg:text-base font-medium">Jonathan Doe</span>
         </div>
       </div>
 

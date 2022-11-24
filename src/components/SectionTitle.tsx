@@ -4,7 +4,7 @@ interface Props {
   title: string;
 }
 
-const FooterTitle: React.FC<Props> = ({ title }) => {
+const SectionTitle: React.FC<Props> = ({ title }) => {
   return (
     <div className="flex items-center gap-x-4 mb-8">
       <h4 className="text-2xl font-bold text-heading">{title}</h4>
@@ -14,4 +14,4 @@ const FooterTitle: React.FC<Props> = ({ title }) => {
   );
 };
 
-export default FooterTitle;
+export default SectionTitle;

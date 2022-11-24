@@ -1,12 +1,17 @@
 import React from "react";
 
-import { Post } from ".";
+import { Post, Pagination } from ".";
 
 const Posts = () => {
   return (
-    <div className="flex-grow flex flex-col gap-y-20">
-      <Post />
-      <Post />
+    <div className="flex-grow">
+      <div className="flex flex-col gap-y-20">
+        <Post />
+        <Post />
+        <Post />
+      </div>
+
+      <Pagination />
     </div>
   );
 };

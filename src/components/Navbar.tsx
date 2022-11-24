@@ -2,10 +2,13 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <nav className="bg-white p-4 flex gap-x-6">
+    <nav className="hidden bg-white p-4 xl:flex gap-x-6">
       <ul className="flex gap-x-4">
         {["home", "membership", "style guide", "#tag", "more"].map((link) => (
-          <li key={`navlink-${link}`} className="capitalize py-2 px-4">
+          <li
+            key={`navlink-${link}`}
+            className="capitalize font-medium tracking-normal py-2 px-4"
+          >
             {link}
           </li>
         ))}
