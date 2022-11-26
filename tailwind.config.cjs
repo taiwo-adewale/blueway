@@ -25,7 +25,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      // base: ["Quicksand", "sans-serif"],
+      primary: ["Josefin Sans", "sans-serif"],
+      secondary: ["Source Serif Pro", "serif"],
     },
   },
   plugins: [],

@@ -3,7 +3,19 @@
 @tailwind utilities;
 
 * {
-  @apply tracking-wider text-textColor;
+  @apply tracking-wider text-textColor font-secondary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+a span,
+button {
+  @apply font-primary;
 }
 
 *:focus {
