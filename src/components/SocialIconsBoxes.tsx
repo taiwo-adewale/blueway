@@ -3,20 +3,39 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaRss } from "react-icons/fa";
 
 const SocialIconsBoxes = () => {
   return (
-    <div className="grid grid-cols-4 gap-x-3 ">
-      <div className="h-[72px] bg-[#175BEB] flex justify-center items-center">
-        <FaFacebookF className="text-2xl fill-white" />
-      </div>
-      <div className="h-[72px] bg-[#1DA1F2] flex justify-center items-center">
-        <FaTwitter className="text-2xl fill-white" />
-      </div>
-      <div className="h-[72px] bg-[#EF00A2] flex justify-center items-center">
-        <FaInstagram className="text-2xl fill-white" />
-      </div>
-      <div className="h-[72px] bg-[#f26522] flex justify-center items-center">
-        <FaRss className="text-2xl fill-white" />
-      </div>
-    </div>
+    <>
+      <a href="#" className="social-icon-link h-[72px] relative bg-white group">
+        <div className="social-icon absolute inset-0 h-full w-full bg-[#175BEB] flex justify-center items-center group-hover:-translate-x-[5px] group-hover:-translate-y-[5px] transition-all duration-300">
+          <FaFacebookF className="text-2xl fill-white leading-[72px] w-full" />
+        </div>
+
+        <div className="absolute inset-0 border-[2px] border-[#175BEB]"></div>
+      </a>
+
+      <a href="#" className="social-icon-link h-[72px] relative bg-white group">
+        <div className="social-icon absolute inset-0 h-full w-full bg-[#1DA1F2] flex justify-center items-center group-hover:-translate-x-[5px] group-hover:-translate-y-[5px] transition-all duration-300">
+          <FaTwitter className="text-2xl fill-white leading-[72px] w-full" />
+        </div>
+
+        <div className="absolute inset-0 border-[2px] border-[#1DA1F2]"></div>
+      </a>
+
+      <a href="#" className="social-icon-link h-[72px] relative bg-white group">
+        <div className="social-icon absolute inset-0 h-full w-full bg-[#EF00A2] flex justify-center items-center group-hover:-translate-x-[5px] group-hover:-translate-y-[5px] transition-all duration-300">
+          <FaInstagram className="text-2xl fill-white leading-[72px] w-full" />
+        </div>
+
+        <div className="absolute inset-0 border-[2px] border-[#EF00A2]"></div>
+      </a>
+
+      <a href="#" className="social-icon-link h-[72px] relative bg-white group">
+        <div className="social-icon absolute inset-0 h-full w-full bg-[#f26522] flex justify-center items-center group-hover:-translate-x-[5px] group-hover:-translate-y-[5px] transition-all duration-300">
+          <FaRss className="text-2xl fill-white leading-[72px] w-full" />
+        </div>
+
+        <div className="absolute inset-0 border-[2px] border-[#f26522]"></div>
+      </a>
+    </>
   );
 };
 
