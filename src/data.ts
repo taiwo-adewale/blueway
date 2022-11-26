@@ -1,4 +1,14 @@
-export const links = [
+interface linksType {
+  linkName: string;
+  linkUrl: string;
+}
+
+interface tagsType {
+  tag: string;
+  color: string;
+}
+
+export const links: linksType[] = [
   {
     linkName: "home",
     linkUrl: "/",
@@ -21,7 +31,7 @@ export const links = [
   },
 ];
 
-export const tags = [
+export const tags: tagsType[] = [
   {
     tag: "Getting Started",
     color: "#FF4C60",
