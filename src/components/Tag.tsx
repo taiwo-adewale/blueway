@@ -3,10 +3,9 @@ import React from "react";
 interface Props {
   tagName: string;
   tagColor: string;
-  fontSize: number;
 }
 
-const Tag: React.FC<Props> = ({ tagName, tagColor, fontSize }) => {
+const Tag: React.FC<Props> = ({ tagName, tagColor }) => {
   return (
     <a
       href="#"
@@ -15,10 +14,7 @@ const Tag: React.FC<Props> = ({ tagName, tagColor, fontSize }) => {
       <span style={{ color: tagColor }} className="text-base">
         #
       </span>
-      <span
-        className="text-btnPrimary font-medium"
-        style={{ fontSize: `${fontSize}px` }}
-      >
+      <span className="text-btnPrimary font-medium text-xs md:text-sm">
         {tagName}
       </span>
     </a>

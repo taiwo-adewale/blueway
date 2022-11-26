@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import { Header, Footer, ScrollToTop, Search, NavMobile } from "./components";
+import { Header, Footer, ScrollToTop, Search } from "./components";
 import { Home } from "./pages";
 import { RootState } from "./redux/store";
 

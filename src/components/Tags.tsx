@@ -15,7 +15,6 @@ const Tags = ({ fontSize }: Props) => {
           key={`footer-tag-${index}`}
           tagName={tag.tag}
           tagColor={tag.color}
-          fontSize={fontSize || 14}
         />
       ))}
     </div>

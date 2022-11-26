@@ -2,8 +2,7 @@ import React from "react";
 import { FaFacebookF, FaTwitter, FaGlobeAmericas } from "react-icons/fa";
 
 import { SectionTitle, Tags, SocialIconsBoxes } from ".";
-
-import picOne from "../assets/picture-10.jpeg";
+import { images } from "../constants";
 
 const Footer = () => {
   return (
@@ -15,7 +14,11 @@ const Footer = () => {
           <div className="flex flex-col gap-y-5">
             {[1, 2, 3].map((post, index) => (
               <div key={`footer-post-${index}`} className="flex gap-x-4">
-                <img src={picOne} alt="" className="w-[60px] h-[64px]" />
+                <img
+                  src={images.mountain02}
+                  alt=""
+                  className="w-[60px] h-[64px]"
+                />
 
                 <div className="flex flex-col mb-2">
                   <a
@@ -50,7 +53,11 @@ const Footer = () => {
 
           <div className="flex flex-col">
             <div className="flex flex-wrap sm:flex-nowrap gap-x-5 gap-y-3">
-              <img src={picOne} alt="" className="w-20 h-20 rounded-full" />
+              <img
+                src={images.person01}
+                alt=""
+                className="w-20 h-20 rounded-full"
+              />
               <div className="flex flex-col">
                 <a href="#" className="font-bold mb-1">
                   Jonathan Doe
@@ -88,21 +95,21 @@ const Footer = () => {
         <div className="mb-5 flex flex-wrap justify-center items-center gap-x-2">
           <a
             href="#"
-            className="hover:text-primary font-medium transition-all duration-300"
+            className="hover:text-primary font-secondary font-medium transition-all duration-300"
           >
             Terms & Conditions
           </a>
           <span className="text-[8px]">|</span>
           <a
             href="#"
-            className="hover:text-primary font-medium transition-all duration-300"
+            className="hover:text-primary font-secondary font-medium transition-all duration-300"
           >
             Faqs
           </a>
           <span className="text-[8px]">|</span>
           <a
             href="#"
-            className="hover:text-primary font-medium transition-all duration-300"
+            className="hover:text-primary font-secondary font-medium transition-all duration-300"
           >
             Privacy Policy
           </a>
@@ -112,14 +119,14 @@ const Footer = () => {
           Published with{" "}
           <a
             href="#"
-            className="hover:text-primary font-bold text-btnPrimary transition-all duration-300"
+            className="hover:text-primary font-secondary font-bold text-btnPrimary transition-all duration-300"
           >
             React
           </a>{" "}
           &{" "}
           <a
             href="#"
-            className="hover:text-primary font-bold text-btnPrimary transition-all duration-300"
+            className="hover:text-primary font-secondary font-bold text-btnPrimary transition-all duration-300"
           >
             Netlify
           </a>

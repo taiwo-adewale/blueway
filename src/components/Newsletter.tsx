@@ -4,29 +4,27 @@ import { SocialIcons } from ".";
 
 const Newsletter = () => {
   return (
-    <div className="w-full bg-white newsletter flex justify-center p-[50px]">
-      <div className="flex flex-col text-center">
-        <h2 className="text-3xl text-heading font-bold mb-4">
+    <div className="w-full bg-white newsletter flex justify-center p-[24px] md:p-[50px]">
+      <div className="flex flex-col w-full text-center py-2">
+        <h2 className="text-[26px] md:text-[30px] xl:text-4xl text-heading font-bold mb-5 leading-[1.2]">
           Subscribe to Blueway
         </h2>
 
-        <p className="mb-8">
+        <p className="mb-8 text-sm sm:text-base">
           Get the latest posts delivered right to your email.
         </p>
 
         <form
           action=""
-          className="flex flex-col md:flex-row justify-center items-center mb-8"
+          className="flex flex-col md:flex-row justify-center gap-y-6 sm:gap-y-8 items-center mb-6"
         >
           <input
             type="email"
-            name=""
-            id=""
-            className="input-shadow bg-mainBg py-3.5 px-6 w-full md:w-[350px] placeholder:text-textColor placeholder:font-medium tracking-normal placeholder:text-center"
+            className="input-shadow bg-mainBg py-3 px-6 w-full md:w-[350px] placeholder:text-textColor placeholder:font-medium tracking-normal placeholder:text-center placeholder:text-sm placeholder:xl:text-base"
             placeholder="Enter your email address"
           />
-          <button className="bg-btnPrimary text-white md:h-full font-medium py-3 px-7">
-            Search
+          <button className="bg-btnPrimary text-xs sm:text-sm text-white md:h-full font-medium py-2.5 px-7">
+            Submit
           </button>
         </form>
 

@@ -26,7 +26,7 @@ const NavMobile = () => {
           {links.map((link) => (
             <Link
               to={link.linkUrl}
-              className="p-4 hover:text-primary transition-all duration-300 text-[15px] text-btnPrimary capitalize font-bold"
+              className="p-4 hover:text-primary transition-all duration-300 text-[15px] text-btnPrimary capitalize font-bold font-secondary"
             >
               {link.linkName}
             </Link>
