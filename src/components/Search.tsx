@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { HiX } from "react-icons/hi";
 import { FaSearch } from "react-icons/fa";
 import { useDispatch } from "react-redux";
@@ -9,13 +9,25 @@ import { setIsSearch } from "../redux/features/stateSlice";
 const Search = () => {
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    const handleEscPress = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        dispatch(setIsSearch(false));
+      }
+    };
+
+    document.addEventListener("keydown", handleEscPress);
+
+    return () => document.removeEventListener("keydown", handleEscPress);
+  }, []);
+
   return (
-    <div className="fixed flex justify-center items-center inset-0 bg-white z-[99]">
+    <div className="fixed h-screen w-full flex justify-center items-center inset-0 bg-white z-[99]">
       <div
         onClick={() => dispatch(setIsSearch(false))}
         className="fixed right-2 top-2 p-2 cursor-pointer"
       >
-        <HiX className="w-8 h-8" />
+        <HiX className="w-8 h-8 fill-btnPrimary" />
       </div>
 
       <div className="container">
