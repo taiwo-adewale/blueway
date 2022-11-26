@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-// import { Routes, Route } from "react-router";
+import { Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import { Header, Footer, ScrollToTop, Search } from "./components";
+import { Header, Footer, ScrollToTop, Search, NavMobile } from "./components";
 import { Home } from "./pages";
 import { RootState } from "./redux/store";
 
@@ -21,18 +21,20 @@ const App = () => {
         body.style.overflow = "auto";
       }
     }
-  }, [isSearch]);
+  }, [isSearch, isNavMobile]);
 
   return (
-    <div>
+    <div
+      className={`transition-all duration-300 ${
+        isNavMobile ? "translate-x-[300px] xl:translate-x-0" : ""
+      }`}
+    >
       <Header />
-
       {isSearch && <Search />}
 
-      {/* <Routes>
+      <Routes>
         <Route path="/" element={<Home />} />
-      </Routes> */}
-      <Home />
+      </Routes>
 
       <Footer />
       <ScrollToTop />
