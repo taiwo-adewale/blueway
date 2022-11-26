@@ -17,6 +17,20 @@ body {
   @apply bg-mainBg;
 }
 
+.container {
+  @apply max-w-full xl:max-w-[1200px] transition-all duration-300;
+}
+
+.social-icon-link:hover .social-icon::after {
+  @apply opacity-0;
+}
+
+.social-icon::after {
+  content: "";
+  @apply border border-white absolute inset-[2px] transition-all duration-300 z-[2];
+}
+
+/* box shadows */
 .post {
   -webkit-box-shadow: 0 3px 12px -1px rgb(7 10 25 / 10%),
     0 22px 27px -30px rgb(7 10 25 / 10%);
@@ -42,4 +56,16 @@ body {
 .shadow-2 {
   -webkit-box-shadow: 0px 3px 5px -1px rgb(7 10 25 / 20%);
   box-shadow: 0px 3px 5px -1px rgb(7 10 25 / 20%);
+}
+
+.navbar {
+  -webkit-box-shadow: 0px 2px 3px 0px rgb(0 0 0 / 7%);
+  box-shadow: 0px 2px 3px 0px rgb(0 0 0 / 7%);
+}
+
+.nav__mobile {
+  -webkit-box-shadow: 0 3px 12px -1px rgb(7 10 25 / 20%),
+    0 22px 27px -20px rgb(7 10 25 / 20%);
+  box-shadow: 0 3px 12px -1px rgb(7 10 25 / 20%),
+    0 22px 27px -20px rgb(7 10 25 / 20%);
 }

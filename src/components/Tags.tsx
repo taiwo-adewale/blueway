@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Tag } from ".";
+import { tags } from "../data";
 
 interface Props {
   fontSize?: number;
@@ -9,15 +10,13 @@ interface Props {
 const Tags = ({ fontSize }: Props) => {
   return (
     <div className="flex flex-wrap gap-x-5 gap-y-6">
-      {[
-        "Getting Started",
-        "Health",
-        "Lifestyle",
-        "Music",
-        "Technology",
-        "Travel",
-      ].map((tag) => (
-        <Tag key={`footer-tag-${tag}`} tag={tag} fontSize={fontSize || 14} />
+      {tags.map((tag, index) => (
+        <Tag
+          key={`footer-tag-${index}`}
+          tagName={tag.tag}
+          tagColor={tag.color}
+          fontSize={fontSize || 14}
+        />
       ))}
     </div>
   );

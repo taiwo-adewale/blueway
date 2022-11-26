@@ -13,7 +13,9 @@ const Sidebar = () => {
       <div>
         <SectionTitle title="Follow Me!" />
 
-        <SocialIconsBoxes />
+        <div className="grid grid-cols-4 gap-x-3">
+          <SocialIconsBoxes />
+        </div>
       </div>
       <div>
         <SectionTitle title="Advertising" />

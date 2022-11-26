@@ -12,14 +12,17 @@ const Post = () => {
         <img src={picOne} alt="" className="w-[120px] h-[120px]" />
 
         <div className="flex flex-col">
-          <a href="#" className="text-3xl mb-2 text-heading font-bold">
+          <a
+            href="#"
+            className="text-3xl mb-2 xl:text-4xl text-heading font-bold"
+          >
             Far far away, behind the word mountains
           </a>
           <p>March 16, 2021 3 min read 1</p>
         </div>
       </div>
 
-      <p className="text-sm lg:text-[15px] mb-12">
+      <p className="text-sm lg:text-[15px] xl:text-[17px] mb-12">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
         nostrum quidem deleniti ab, quisquam corrupti, rem facilis molestias
         alias quo inventore, hic quaerat incidunt reprehenderit debitis
@@ -28,7 +31,7 @@ const Post = () => {
 
       <div className="flex justify-between items-center">
         <div className="gap-x-2 gap-y-1.5">
-          <Tag tag="Getting Started" fontSize={12} />
+          <Tag tagName="Getting Started" tagColor="#fb3451" fontSize={12} />
         </div>
 
         <div className="flex items-center gap-x-2">
