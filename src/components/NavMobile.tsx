@@ -1,0 +1,45 @@
+import React from "react";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { HiX } from "react-icons/hi";
+
+import { links } from "../data";
+import { setIsNavMobile } from "../redux/features/stateSlice";
+
+const NavMobile = () => {
+  const dispatch = useDispatch();
+
+  const handleOutsideClick = (e: React.MouseEvent<HTMLElement>) => {
+    dispatch(setIsNavMobile(false));
+  };
+
+  return (
+    <>
+      <nav className="nav__mobile min-w-[300px] w-[300px] h-screen fixed top-0 bottom-0 -left-[300px] p-5 bg-white xl:hidden z-[89]">
+        <div className="flex flex-col h-full w-full pt-12 relative">
+          <button
+            onClick={() => dispatch(setIsNavMobile(false))}
+            className="absolute right-0 top-0"
+          >
+            <HiX className="fill-btnPrimary w-6 h-6" />
+          </button>
+          {links.map((link) => (
+            <Link
+              to={link.linkUrl}
+              className="p-4 hover:text-primary transition-all duration-300 text-[15px] text-btnPrimary capitalize font-bold"
+            >
+              {link.linkName}
+            </Link>
+          ))}
+        </div>
+      </nav>
+
+      <div
+        onClick={handleOutsideClick}
+        className="fixed w-full h-full inset-0 bg-[rgba(0,0,0,0.25)] z-[79] transition-all duration-300 xl:hidden"
+      ></div>
+    </>
+  );
+};
+
+export default NavMobile;
