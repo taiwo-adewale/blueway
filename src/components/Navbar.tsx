@@ -16,7 +16,7 @@ const Navbar = () => {
           {links.map((link, index) => (
             <li
               key={`navlink-${link}-${index}`}
-              className="capitalize font-medium tracking-normal py-2 px-4"
+              className="capitalize font-medium tracking-normal py-2 px-4 navHover"
             >
               <Link to={link.linkUrl}>{link.linkName}</Link>
             </li>

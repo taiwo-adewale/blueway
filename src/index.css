@@ -99,3 +99,9 @@ body {
 .Fixed:hover{
   bottom: 22px;
 }
+.navHover{
+  transition: 700ms ease-in;
+}
+.navHover:hover{
+  color: red;
+}
