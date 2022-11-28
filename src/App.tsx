@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import { Header, Footer, ScrollToTop, Search } from "./components";
+import { Header, Footer, ScrollToTop, Search, Fixed } from "./components";
 import { Home } from "./pages";
 import { RootState } from "./redux/store";
 
@@ -36,6 +36,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
       </Routes>
 
+      <Fixed />
       <Footer />
       <ScrollToTop />
     </div>
