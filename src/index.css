@@ -93,4 +93,9 @@ body {
   bottom: 10px;
   cursor: pointer;
   z-index: 10000;
+  transition: 1s ease-in;
+}
+
+.Fixed:hover{
+  bottom: 22px;
 }
