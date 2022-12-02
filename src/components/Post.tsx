@@ -3,7 +3,7 @@ import { BsDashLg } from "react-icons/bs";
 import { MdChatBubbleOutline } from "react-icons/md";
 
 import { images } from "../constants";
-import { Tag } from ".";
+import { Tag, ButtonLink } from ".";
 import { tags } from "../data";
 
 const Post = () => {
@@ -60,12 +60,9 @@ const Post = () => {
         </div>
       </div>
 
-      <a
-        href="#"
-        className="bg-btnPrimary text-[13px] whitespace-nowrap xl:text-[15px] absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 text-white py-2.5 px-7 font-medium"
-      >
-        Continue reading
-      </a>
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
+        <ButtonLink urlTo="/">Continue Reading</ButtonLink>
+      </div>
     </article>
   );
 };

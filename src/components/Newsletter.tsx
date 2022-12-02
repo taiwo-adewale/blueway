@@ -1,6 +1,6 @@
 import React from "react";
 
-import { SocialIcons } from ".";
+import { SocialIcons, Button } from ".";
 
 const Newsletter = () => {
   return (
@@ -23,12 +23,12 @@ const Newsletter = () => {
             className="input-shadow bg-mainBg py-3 px-6 w-full md:w-[350px] placeholder:text-textColor placeholder:font-medium tracking-normal placeholder:text-center placeholder:text-sm placeholder:xl:text-base"
             placeholder="Enter your email address"
           />
-          <button className="bg-btnPrimary text-xs sm:text-sm text-white md:h-full font-medium py-2.5 px-7">
+          <Button type="submit" classNames="font-primary">
             Submit
-          </button>
+          </Button>
         </form>
 
-        <div className=" flex justify-center mb-2">
+        <div className="flex justify-center mb-2">
           <SocialIcons />
         </div>
       </div>

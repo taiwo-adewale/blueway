@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import { NavMobile } from ".";
+import { NavMobile, ButtonLink } from ".";
 import { links } from "../data";
 import { RootState } from "../redux/store";
 
@@ -22,9 +22,9 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <a href="#" className="bg-btnPrimary px-8 py-2 text-white">
+        <ButtonLink urlTo="/" classNames="px-8">
           Sign In
-        </a>
+        </ButtonLink>
       </nav>
 
       {isNavMobile && <NavMobile />}

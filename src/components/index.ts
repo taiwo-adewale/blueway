@@ -15,3 +15,4 @@ export { default as ScrollToTop } from "./ScrollToTop";
 export { default as Pagination } from "./Pagination";
 export { default as Search } from "./Search";
 export { default as Button } from "./Button";
+export { default as ButtonLink } from "./ButtonLink";

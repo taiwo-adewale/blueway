@@ -1,15 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 interface ButtonType {
   children: React.ReactNode;
-  type?: "button" | "submit" | "reset" | undefined;
+  urlTo: string;
   classNames?: string;
 }
 
-const Button = ({ children, type, classNames }: ButtonType) => {
+const ButtonLink = ({ children, urlTo, classNames }: ButtonType) => {
   return (
-    <button
-      type={type || "button"}
+    <Link
+      to={urlTo}
       className="bg-white text-[13px] xl:text-[15px] font-medium relative group inline-block"
     >
       <span
@@ -21,8 +22,8 @@ const Button = ({ children, type, classNames }: ButtonType) => {
       </span>
 
       <div className="absolute inset-0 border-[2px] border-btnPrimary"></div>
-    </button>
+    </Link>
   );
 };
 
-export default Button;
+export default ButtonLink;
