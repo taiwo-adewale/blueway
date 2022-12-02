@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { HiX } from "react-icons/hi";
 import { FaSearch } from "react-icons/fa";
 import { useDispatch } from "react-redux";
@@ -8,6 +8,13 @@ import { setIsSearch } from "../redux/features/stateSlice";
 
 const Search = () => {
   const dispatch = useDispatch();
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (!inputRef.current) throw Error("inputRef is not assigned");
+
+    inputRef.current.focus();
+  }, []);
 
   useEffect(() => {
     const handleEscPress = (e: KeyboardEvent) => {
@@ -39,6 +46,7 @@ const Search = () => {
           <form action="" className="w-full mb-4">
             <div className="w-full md:w-[90%] relative mx-auto">
               <input
+                ref={inputRef}
                 type="search"
                 className="w-full pr-[50px] bg-mainBg placeholder:text-sm placeholder:tracking-normal py-4 px-6 h-[45px] input-shadow"
                 placeholder="Type to start your search..."
