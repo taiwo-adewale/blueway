@@ -5,7 +5,7 @@ const SocialIconsBoxes = () => {
   return (
     <>
       <a href="#" className="social-icon-link h-[72px] relative bg-white group">
-        <div className="social-icon absolute inset-0 h-full w-full bg-[#175BEB] flex justify-center items-center group-hover:-translate-x-[5px] group-hover:-translate-y-[5px] transition-all duration-300">
+        <div className="social-icon h-full w-full bg-[#175BEB] flex justify-center items-center group-hover:-translate-x-[5px] group-hover:-translate-y-[5px] transition-all duration-300">
           <FaFacebookF className="text-2xl fill-white leading-[72px] w-full" />
         </div>
 
@@ -13,7 +13,7 @@ const SocialIconsBoxes = () => {
       </a>
 
       <a href="#" className="social-icon-link h-[72px] relative bg-white group">
-        <div className="social-icon absolute inset-0 h-full w-full bg-[#1DA1F2] flex justify-center items-center group-hover:-translate-x-[5px] group-hover:-translate-y-[5px] transition-all duration-300">
+        <div className="social-icon h-full w-full bg-[#1DA1F2] flex justify-center items-center group-hover:-translate-x-[5px] group-hover:-translate-y-[5px] transition-all duration-300">
           <FaTwitter className="text-2xl fill-white leading-[72px] w-full" />
         </div>
 
@@ -21,7 +21,7 @@ const SocialIconsBoxes = () => {
       </a>
 
       <a href="#" className="social-icon-link h-[72px] relative bg-white group">
-        <div className="social-icon absolute inset-0 h-full w-full bg-[#EF00A2] flex justify-center items-center group-hover:-translate-x-[5px] group-hover:-translate-y-[5px] transition-all duration-300">
+        <div className="social-icon h-full w-full bg-[#EF00A2] flex justify-center items-center group-hover:-translate-x-[5px] group-hover:-translate-y-[5px] transition-all duration-300">
           <FaInstagram className="text-2xl fill-white leading-[72px] w-full" />
         </div>
 
@@ -29,7 +29,7 @@ const SocialIconsBoxes = () => {
       </a>
 
       <a href="#" className="social-icon-link h-[72px] relative bg-white group">
-        <div className="social-icon absolute inset-0 h-full w-full bg-[#f26522] flex justify-center items-center group-hover:-translate-x-[5px] group-hover:-translate-y-[5px] transition-all duration-300">
+        <div className="social-icon h-full w-full bg-[#f26522] flex justify-center items-center group-hover:-translate-x-[5px] group-hover:-translate-y-[5px] transition-all duration-300">
           <FaRss className="text-2xl fill-white leading-[72px] w-full" />
         </div>
 

@@ -23,8 +23,9 @@ const NavMobile = () => {
           >
             <HiX className="fill-btnPrimary w-6 h-6" />
           </button>
-          {links.map((link) => (
+          {links.map((link, index) => (
             <Link
+              key={`navlink-mobile-${link}-${index}`}
               to={link.linkUrl}
               className="p-4 hover:text-primary transition-all duration-300 text-[15px] text-btnPrimary capitalize font-bold font-secondary"
             >
