@@ -105,3 +105,185 @@ body {
 .navHover:hover{
   color: red;
 }
+/* li:first-child{
+  color: rebeccapurple;
+  position: relative;
+}
+
+li:first-child::before{
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: green;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 10px;
+} */
+.active-btn{
+  color: black;
+  margin: 0 10px;
+  border-bottom: 3px solid blue;
+  position: relative;
+}
+.active-btn::before{
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: lightgreen;
+  border-radius: 50%;
+  position: absolute;
+  top: -8px;
+  left: -5px;
+}
+.normal-btn {
+  color: black;
+  margin: 0 10px;
+}
+.normal-btn:hover, .active-btn:hover{
+  color: red;
+}
+.widgets{
+  background-color: #eee;
+  position: relative;
+  width: 34%;
+  padding: 5px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  -webkit-box-shadow:0px 10px 39px 10px rgba(62,66,66,0.22);
+-moz-box-shadow: 0px 10px 39px 10px rgba(62,66,66,0.22);
+box-shadow: 0px 10px 39px 10px rgba(62,66,66,0.22);
+z-index: 50;
+}
+
+.widgets>h1{
+  cursor: pointer;
+  text-align: center;
+  color: green;
+  padding: 15px;
+  width: 49%;
+  border-radius: 50px;
+  transition: 200ms ease-in;
+}
+/* .widgets h1:hover{
+  color: #eee;
+  background-color: red;
+} */
+.widgTogs{
+  color: #eee !important;
+  background-color: red;
+}
+.text{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.text a{
+  text-decoration: none;
+  margin-left: 5px;
+  position: relative;
+}
+.text a::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 0px;
+  bottom: 0;
+  left: 0;
+  background-color: lightblue;
+  transform-origin: center;
+  transition: height 0.3s ease;
+}
+.text a:hover::after{
+  height: 4px;
+}
+.widgets::before{
+  content: '';
+  display: inline-block;
+  width: 50%;
+  height: 85%;
+  padding: 15px;
+  border-radius: 50px;
+  position: absolute;
+  background-color: red;
+  opacity: 0.5;
+  animation: toggle 3s ease-in infinite;
+}
+
+@keyframes toggle{
+  100%{
+      transform: translateX(92%);
+  }
+}
+
+.sunText h1{
+  color: lightseagreen;
+  font-size: 30px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+.sunText p{
+  font-weight: bolder;
+  margin: 13px 0 35px 0;
+  word-spacing: 3px;
+  opacity: 60%;
+}
+.subscribe{
+  padding: 50px 0px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, 
+              rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  margin: 45px 0;
+}
+input[type="text"]{
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 
+            0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 
+            0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  width:30%;
+  text-align: center;
+}
+input[type='submit']{
+  background-color: lightseagreen;
+  padding: 10px 20px;
+  text-transform: capitalize;
+  color: #eee;
+  cursor: pointer;
+  transition:all 1s ease-in;
+  outline: 2px solid lightseagreen;
+}
+input[type='submit']:hover{
+    transform: translate(-5px, -5px);
+}
+.submit{
+  width: fit-content;
+  z-index: 100;
+  border: 2px solid lightseagreen;
+}
+
+input::placeholder{
+  font-size: 16px;
+  color: #aaa;
+  font-family: var(font-primary);
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  margin: 10px 10px 50px 10px;
+}
+
+.post{
+  width: fit-content !important;
+}
+
+@media only screen and (max-width: 1200px) {
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

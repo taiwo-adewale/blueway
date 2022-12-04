@@ -4,6 +4,9 @@ import { useSelector } from "react-redux";
 
 import { Header, Footer, ScrollToTop, Search, Fixed } from "./components";
 import { Home } from "./pages";
+import Membership from "./pages/membership";
+import Tag from "./pages/Tag";
+import {Navbar} from "./components";
 import { RootState } from "./redux/store";
 
 const App = () => {
@@ -32,10 +35,16 @@ const App = () => {
       <Header />
       {isSearch && <Search />}
 
-      <Routes>
+      {/*<Routes>
         <Route path="/" element={<Home />} />
-      </Routes>
-
+        <Route path="/membership" element={<Membership />} />
+      </Routes>*/}
+       <Routes>
+        <Route path="/" element={<Navbar />} />
+        <Route index element={<Home />} />
+        <Route path="/membership" element={<Membership />} />
+        <Route path="/tag" element={<Tag />} />
+      </Routes> 
       <Fixed />
       <Footer />
       <ScrollToTop />

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import { NavMobile } from ".";
@@ -8,7 +8,6 @@ import { RootState } from "../redux/store";
 
 const Navbar = () => {
   const { isNavMobile } = useSelector((state: RootState) => state.state);
-
   return (
     <>
       <nav className="navbar hidden bg-white p-4 xl:flex gap-x-6">
@@ -18,7 +17,8 @@ const Navbar = () => {
               key={`navlink-${link}-${index}`}
               className="capitalize font-medium tracking-normal py-2 px-4 navHover"
             >
-              <Link to={link.linkUrl}>{link.linkName}</Link>
+              {/* <Link to={link.linkUrl} className="links" >{link.linkName}</Link> */}
+              <NavLink to={link.linkUrl} className={({ isActive }) => (isActive ? 'active-btn' : 'normal-btn')}> {link.linkName} </NavLink>
             </li>
           ))}
         </ul>

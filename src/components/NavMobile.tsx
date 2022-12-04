@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { HiX } from "react-icons/hi";
 
 import { links } from "../data";
@@ -24,12 +24,13 @@ const NavMobile = () => {
             <HiX className="fill-btnPrimary w-6 h-6" />
           </button>
           {links.map((link) => (
-            <Link
-              to={link.linkUrl}
-              className="p-4 hover:text-primary transition-all duration-300 text-[15px] text-btnPrimary capitalize font-bold font-secondary"
-            >
-              {link.linkName}
-            </Link>
+            // <Link
+            //   to={link.linkUrl}
+            //   className="p-4 hover:text-primary transition-all duration-300 text-[15px] text-btnPrimary capitalize font-bold font-secondary"
+            // >
+            //   {link.linkName}
+            // </Link>
+            <NavLink to={link.linkUrl} className={({ isActive }) => (isActive ? 'active-btn' : 'normal-btn')}> {link.linkName} </NavLink>
           ))}
         </div>
       </nav>
