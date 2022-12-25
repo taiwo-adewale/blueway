@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Newsletter, Posts, Sidebar } from "../components";
+import HeaderFooterWrap from "../wrapper/HeaderFooterWrap";
 
 const Home = () => {
   return (
@@ -16,4 +17,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HeaderFooterWrap(Home);

@@ -28,14 +28,14 @@ const Header = () => {
 
           <a
             href="#"
-            className="md:w-1/3 text-center xs:text-[35px] text-[40px] md:text-[50px] xl:text-6xl text-heading font-bold transition-all duration-300"
+            className="md:w-1/3 text-center xs:text-[35px] text-[40px] md:text-[50px] xl:text-6xl text-heading font-bold hover:-translate-y-[2px] transition-all duration-300"
           >
-            Blueway
+            <span className="text-primary font-primary">B</span>lueway
           </a>
           <div className="md:w-1/3">
             <button
               onClick={() => dispatch(setIsSearch(true))}
-              className="xs:w-8 xs:h-8 w-10 h-10 bg-primary rounded-full flex justify-center items-center ml-auto"
+              className="xs:w-8 xs:h-8 w-10 h-10 bg-primary rounded-full flex justify-center items-center ml-auto hover:-translate-y-[2px] transition-all duration-300"
             >
               <FiSearch className="stroke-white w-[18px] xs:h-4 h-[18px]" />
             </button>

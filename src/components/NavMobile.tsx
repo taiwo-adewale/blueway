@@ -1,10 +1,11 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { HiX } from "react-icons/hi";
 
 import { links } from "../data";
 import { setIsNavMobile } from "../redux/features/stateSlice";
+import { ButtonLink } from ".";
 
 const NavMobile = () => {
   const dispatch = useDispatch();
@@ -24,14 +25,23 @@ const NavMobile = () => {
             <HiX className="fill-btnPrimary w-6 h-6" />
           </button>
           {links.map((link, index) => (
-            <Link
+            <NavLink
               key={`navlink-mobile-${link}-${index}`}
               to={link.linkUrl}
-              className="p-4 hover:text-primary transition-all duration-300 text-[15px] text-btnPrimary capitalize font-bold font-secondary"
+              className={({ isActive }) =>
+                `p-4 hover:text-primary transition-all duration-300 text-[15px] text-btnPrimary capitalize font-bold font-secondary relative ${
+                  isActive && "nav__link-active"
+                }`
+              }
+              onClick={() => dispatch(setIsNavMobile(false))}
             >
               {link.linkName}
-            </Link>
+            </NavLink>
           ))}
+
+          <div className="text-center mt-10">
+            <ButtonLink urlTo="/login">Sign In</ButtonLink>
+          </div>
         </div>
       </nav>
 

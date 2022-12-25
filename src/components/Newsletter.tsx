@@ -7,7 +7,8 @@ const Newsletter = () => {
     <div className="w-full bg-white newsletter flex justify-center p-[24px] md:p-[50px]">
       <div className="flex flex-col w-full text-center py-2">
         <h2 className="text-[26px] md:text-[30px] xl:text-4xl text-heading font-bold mb-5 leading-[1.2]">
-          Subscribe to Blueway
+          Subscribe to <span className="text-primary font-primary">B</span>
+          lueway
         </h2>
 
         <p className="mb-8 text-sm sm:text-base">
@@ -20,7 +21,7 @@ const Newsletter = () => {
         >
           <input
             type="email"
-            className="input-shadow bg-mainBg py-3 px-6 w-full md:w-[350px] placeholder:text-textColor placeholder:font-medium tracking-normal placeholder:text-center placeholder:text-sm placeholder:xl:text-base"
+            className="py-3 px-6 md:w-[350px] placeholder:text-center"
             placeholder="Enter your email address"
           />
           <Button type="submit" classNames="font-primary">

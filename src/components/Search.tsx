@@ -39,8 +39,9 @@ const Search = () => {
 
       <div className="container">
         <div className="flex flex-col text-center items-center">
-          <p className="hidden lg:block text-[20px] font-bold mb-10 text-btnPrimary">
-            Press <span className="text-primary">Esc</span> to close
+          <p className="hidden lg:block text-[20px] xl:text-4xl font-bold mb-10 text-btnPrimary font-primary">
+            Press <span className="text-primary font-primary">ESC</span> to
+            close
           </p>
 
           <form action="" className="w-full mb-4">
@@ -48,7 +49,7 @@ const Search = () => {
               <input
                 ref={inputRef}
                 type="search"
-                className="w-full pr-[50px] bg-mainBg placeholder:text-sm placeholder:tracking-normal py-4 px-6 h-[45px] input-shadow"
+                className="pr-[50px] py-4 px-6 h-[45px]"
                 placeholder="Type to start your search..."
               />
 
@@ -59,7 +60,9 @@ const Search = () => {
           </form>
 
           <p className="mt-[100px] text-lg mb-4 text-btnPrimary tracking-normal">
-            Or check our Popular Categories...
+            Or check our <span className="text-primary">P</span>
+            opular <span className="text-primary">C</span>
+            ategories...
           </p>
 
           <Tags fontSize={12} />

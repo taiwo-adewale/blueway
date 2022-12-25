@@ -2,7 +2,6 @@ export { default as Header } from "./Header";
 export { default as Navbar } from "./Navbar";
 export { default as NavMobile } from "./NavMobile";
 export { default as Posts } from "./Posts";
-export { default as Post } from "./Post";
 export { default as Sidebar } from "./Sidebar";
 export { default as Tag } from "./Tag";
 export { default as Tags } from "./Tags";

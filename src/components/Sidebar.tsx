@@ -17,7 +17,7 @@ const Sidebar = () => {
           <SocialIconsBoxes />
         </div>
       </div>
-      <div>
+      <div className="sticky top-8">
         <SectionTitle title="Advertising" />
 
         <div className="w-full flex justify-center items-center">

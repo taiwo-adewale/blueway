@@ -1,8 +1,10 @@
 import React from "react";
 import { FaFacebookF, FaTwitter, FaGlobeAmericas } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 import { SectionTitle, Tags, SocialIconsBoxes } from ".";
 import { images } from "../constants";
+import { posts } from "../data";
 
 const Footer = () => {
   return (
@@ -12,22 +14,24 @@ const Footer = () => {
           <SectionTitle title="Latest Articles" />
 
           <div className="flex flex-col gap-y-5">
-            {[1, 2, 3].map((post, index) => (
+            {posts.map((post, index) => (
               <div key={`footer-post-${index}`} className="flex gap-x-4">
-                <img
-                  src={images.mountain02}
-                  alt=""
-                  className="w-[60px] h-[64px]"
-                />
+                <Link to={post.url} className="w-[60px] h-[64px] flex-shrink-0">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-full"
+                  />
+                </Link>
 
                 <div className="flex flex-col mb-2">
-                  <a
-                    href="#"
-                    className="text-heading text-[13px] xl:text-base font-bold mb-1 hover:underline underline-offset-4 decoration-2 decoration-[#65ebe7]"
+                  <Link
+                    to={post.url}
+                    className="text-heading text-[13px] xl:text-base font-bold mb-1 underline-hover"
                   >
-                    Far far away, behind the word mountains
-                  </a>
-                  <p className="text-xs">Mar 16, 2021</p>
+                    {post.title}
+                  </Link>
+                  <p className="text-xs">{post.date}</p>
                 </div>
               </div>
             ))}
@@ -60,26 +64,37 @@ const Footer = () => {
               />
               <div className="flex flex-col">
                 <a href="#" className="font-bold mb-1">
-                  Jonathan Doe
+                  Taiwo Adewale
                 </a>
                 <span className="text-xs sm:text-sm mb-4">
                   Collaborator & Editor
                 </span>
                 <div className="flex gap-x-2">
-                  <a href="#" className="px-0.5">
+                  <a
+                    href="https://twitter.com"
+                    target="_blank"
+                    className="px-0.5"
+                  >
                     <FaTwitter className="text-base fill-[#1DA1F2]" />
                   </a>
-                  <a href="#" className="px-0.5">
+                  <a
+                    href="https://facebook.com"
+                    target="_blank"
+                    className="px-0.5"
+                  >
                     <FaFacebookF className="text-base fill-[#175BEB]" />
                   </a>
-                  <a href="#" className="px-0.5">
+                  <a
+                    href="https://wale-portfolio.netlify.app"
+                    className="px-0.5"
+                  >
                     <FaGlobeAmericas className="text-base fill-primary" />
                   </a>
                 </div>
               </div>
             </div>
             <p className="text-sm mt-4">
-              Hello! My name is Jonathan Doe working from Chile. I create some
+              Hello! My name is Taiwo Adewale working from Chile. I create some
               Ghost and Wordpress themes for differents markets, also, i offer
               live support via our ticket system.
             </p>
@@ -89,7 +104,7 @@ const Footer = () => {
 
       <div className="text-center flex items-center flex-col pb-[50px]">
         <h2 className="text-[32px] text-btnPrimary m-5 mb-8 font-bold xl:text-6xl">
-          Blueway
+          <span className="text-primary font-primary">B</span>lueway
         </h2>
 
         <div className="mb-5 flex flex-wrap justify-center items-center gap-x-2">
@@ -119,14 +134,14 @@ const Footer = () => {
           Published with{" "}
           <a
             href="#"
-            className="hover:text-primary font-secondary font-bold text-btnPrimary transition-all duration-300"
+            className="font-secondary font-bold text-btnPrimary transition-all duration-300 underline-hover"
           >
             React
           </a>{" "}
           &{" "}
           <a
             href="#"
-            className="hover:text-primary font-secondary font-bold text-btnPrimary transition-all duration-300"
+            className="font-secondary font-bold text-btnPrimary transition-all duration-300 underline-hover"
           >
             Netlify
           </a>

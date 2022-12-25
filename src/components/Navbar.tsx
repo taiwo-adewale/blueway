@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import { NavMobile, ButtonLink } from ".";
@@ -18,11 +18,20 @@ const Navbar = () => {
               key={`navlink-${link}-${index}`}
               className="capitalize font-medium tracking-normal py-2 px-4"
             >
-              <Link to={link.linkUrl}>{link.linkName}</Link>
+              <NavLink
+                to={link.linkUrl}
+                className={({ isActive }) =>
+                  `hover:text-primary transition-all duration-150 relative ${
+                    isActive && "nav__link-active"
+                  }`
+                }
+              >
+                {link.linkName}
+              </NavLink>
             </li>
           ))}
         </ul>
-        <ButtonLink urlTo="/" classNames="px-8">
+        <ButtonLink urlTo="/login" classNames="px-8">
           Sign In
         </ButtonLink>
       </nav>

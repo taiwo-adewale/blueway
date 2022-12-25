@@ -2,8 +2,7 @@ import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import { Header, Footer, ScrollToTop, Search } from "./components";
-import { Home } from "./pages";
+import { Home, Login, SignUp, Post } from "./pages";
 import { RootState } from "./redux/store";
 
 const App = () => {
@@ -24,21 +23,13 @@ const App = () => {
   }, [isSearch, isNavMobile]);
 
   return (
-    <div
-      className={`transition-all duration-300 ${
-        isNavMobile ? "translate-x-[300px] xl:translate-x-0" : ""
-      }`}
-    >
-      <Header />
-      {isSearch && <Search />}
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-
-      <Footer />
-      <ScrollToTop />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/sign-up" element={<SignUp />} />
+      <Route path="/posts/:postUrl" element={<Post />} />
+      <Route path="*" element={<Post />} />
+    </Routes>
   );
 };
 
