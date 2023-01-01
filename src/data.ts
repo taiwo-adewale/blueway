@@ -11,6 +11,15 @@ interface tagsType {
   color: string;
 }
 
+interface comments {
+  commenter: string;
+  image: string;
+  timeSpent: number;
+  comment: string;
+  likes: number;
+  comments?: comments[];
+}
+
 interface postsType {
   title: string;
   url: string;
@@ -21,6 +30,7 @@ interface postsType {
   authorImg: string;
   tags: tagsType[];
   body: string;
+  comments?: comments[];
 }
 
 export const links: linksType[] = [
@@ -90,6 +100,31 @@ export const posts: postsType[] = [
     authorImg: images.person01,
     tags: [tags[0], tags[3]],
     body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores strum quidem deleniti ab, quisquam corrupti, rem facilis molestia alias quo inventore, hic quaerat incidunt reprehenderit debitis repellendus earum labore repellat...",
+    comments: [
+      {
+        commenter: "T Blaze",
+        image: images.person01,
+        timeSpent: 3,
+        comment: "This is my test comment",
+        likes: 17,
+        comments: [
+          {
+            commenter: "Nick Cannon",
+            image: images.person01,
+            timeSpent: 2,
+            comment: "This is not the place to test comments",
+            likes: 43,
+          },
+          {
+            commenter: "Sophia Black",
+            image: images.person01,
+            timeSpent: 2,
+            comment: "I agree with Nick",
+            likes: 8,
+          },
+        ],
+      },
+    ],
   },
   {
     title: "War far away, behind the word mountains",
@@ -100,6 +135,17 @@ export const posts: postsType[] = [
     author: "Taiwo Adewale",
     authorImg: images.person01,
     tags: [tags[2], tags[1], tags[5]],
+    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores strum quidem deleniti ab, quisquam corrupti, rem facilis molestia alias quo inventore, hic quaerat incidunt reprehenderit debitis repellendus earum labore repellat...",
+  },
+  {
+    title: "Say far away, behind the word mountains",
+    url: "say-far-away-behind-the-word-mountains",
+    image: images.mountain01,
+    date: "March 16, 2021",
+    minsToRead: 4,
+    author: "Taiwo Adewale",
+    authorImg: images.person01,
+    tags: [tags[4], tags[2]],
     body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores strum quidem deleniti ab, quisquam corrupti, rem facilis molestia alias quo inventore, hic quaerat incidunt reprehenderit debitis repellendus earum labore repellat...",
   },
   {
