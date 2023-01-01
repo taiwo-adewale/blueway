@@ -43,6 +43,18 @@ input {
   @apply flex justify-center items-center;
 }
 
+.normal-text {
+  @apply text-base md:text-lg lg:text-base xl:text-lg;
+}
+
+.large-text {
+  @apply font-bold text-2xl md:text-3xl lg:text-2xl xl:text-3xl;
+}
+
+.hover-up {
+  @apply hover:-translate-y-[5px] transition-all duration-300;
+}
+
 .social-icon-link:hover .social-icon::after {
   @apply opacity-0;
 }
@@ -57,7 +69,7 @@ input {
   @apply w-[5px] h-[5px] rounded-full bg-[#65EBE7] absolute xl:-top-1.5 xl:-left-1.5 left-2.5 top-2.5;
 }
 
-.underline-hover {
+.hover-underline {
   @apply hover:underline underline-offset-4 decoration-2 decoration-[#65ebe7];
 }
 

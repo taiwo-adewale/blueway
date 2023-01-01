@@ -5,7 +5,7 @@ type Props = {
 };
 
 const Paragraph = ({ children }: Props) => {
-  return <p className="mb-8 md:text-lg lg:text-base xl:text-lg">{children}</p>;
+  return <p className="mb-8 normal-text">{children}</p>;
 };
 
 export default Paragraph;

@@ -13,9 +13,9 @@ const ScrollToTop = () => {
   return (
     <div
       onClick={handleScroll}
-      className="fixed shadow-2 w-[50px] h-[50px] bg-btnPrimary right-2 bottom-2 flex justify-center items-center cursor-pointer text-white"
+      className="fixed shadow-2 w-[40px] sm:w-[50px] h-[40px] sm:h-[50px] bg-btnPrimary right-2 bottom-2 flex justify-center items-center cursor-pointer text-white"
     >
-      <RiArrowUpSLine className="fill-white text-[26px]" />
+      <RiArrowUpSLine className="fill-white text-[22px] sm:text-[26px]" />
     </div>
   );
 };

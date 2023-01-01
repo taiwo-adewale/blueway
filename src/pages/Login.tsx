@@ -9,7 +9,7 @@ const Login = () => {
       <div className="flex flex-col justify-center min-h-screen w-full max-w-[600px] mx-auto">
         <Link
           to="/"
-          className="font-bold my-10 sm:my-12 inline-block underline-hover"
+          className="font-bold my-10 sm:my-12 inline-block hover-underline"
         >
           Go back to home
         </Link>
@@ -39,7 +39,7 @@ const Login = () => {
             Don't have an account yet?{" "}
             <Link
               to="/sign-up"
-              className="font-bold font-secondary underline-hover"
+              className="font-bold font-secondary hover-underline"
             >
               Sign Up
             </Link>
@@ -51,14 +51,14 @@ const Login = () => {
             Published with{" "}
             <a
               href="#"
-              className="font-secondary font-bold text-btnPrimary transition-all duration-300 underline-hover"
+              className="font-secondary font-bold text-btnPrimary transition-all duration-300 hover-underline"
             >
               React
             </a>{" "}
             &{" "}
             <a
               href="#"
-              className="font-secondary font-bold text-btnPrimary transition-all duration-300 underline-hover"
+              className="font-secondary font-bold text-btnPrimary transition-all duration-300 hover-underline"
             >
               Netlify
             </a>

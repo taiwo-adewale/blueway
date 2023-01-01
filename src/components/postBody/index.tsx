@@ -4,4 +4,4 @@ export { default as List } from "./List";
 export { default as Blockquote } from "./Blockquote";
 export { default as Span } from "./Span";
 export { default as Divider } from "./Divider";
-export { default as Link } from "./Link";
+export { default as LinkSpan } from "./LinkSpan";
