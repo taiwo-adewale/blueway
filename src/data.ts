@@ -43,16 +43,16 @@ export const links: linksType[] = [
     linkUrl: "/membership",
   },
   {
-    linkName: "style guide",
-    linkUrl: "/style-guide",
-  },
-  {
     linkName: "#tag",
     linkUrl: "/tags",
   },
   {
-    linkName: "more",
-    linkUrl: "/more",
+    linkName: "about",
+    linkUrl: "/about",
+  },
+  {
+    linkName: "contact",
+    linkUrl: "/contact",
   },
 ];
 
