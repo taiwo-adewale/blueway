@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import { Home, Login, SignUp, Post, Tag } from "./pages";
+import { Home, Login, SignUp, Post, Tags } from "./pages";
 import { RootState } from "./redux/store";
 
 const App = () => {
@@ -25,12 +25,15 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/contact" element={<Home />} />
+      <Route path="/about" element={<Home />} />
+      <Route path="/membership" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/sign-up" element={<SignUp />} />
       <Route path="/posts/:postUrl" element={<Post />} />
-      <Route path="/tags" element={<Tag />} />
-      <Route path="/tags/:tag" element={<Tag />} />
-      <Route path="*" element={<Post />} />
+      <Route path="/tags" element={<Tags />} />
+      <Route path="/tags/:tag" element={<Tags />} />
+      <Route path="*" element={<Home />} />
     </Routes>
   );
 };
