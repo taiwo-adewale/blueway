@@ -600,7 +600,7 @@ export const posts: postsType[] = [
             commenter: "Ola Michael",
             image: images.comment01,
             timeSpent: 1,
-            comment: "Na wa o. Nami you still come blueway ddey beg",
+            comment: "Na wa o. Nami you still come blueway dey beg",
             likes: 28,
           },
         ],
