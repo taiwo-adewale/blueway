@@ -73,11 +73,6 @@ input {
   @apply hover:underline underline-offset-4 decoration-2 decoration-[#65ebe7];
 }
 
-.post__list-item::before {
-  content: "";
-  @apply absolute top-1/2 left-4 xs:left-2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[#65EBE7];
-}
-
 /* box shadows */
 .post {
   -webkit-box-shadow: 0 3px 12px -1px rgb(7 10 25 / 10%),
@@ -117,4 +112,19 @@ input {
 .link-copy {
   -webkit-box-shadow: 0 3px 5px -2px rgb(7 10 25 / 20%);
   box-shadow: 0 3px 5px -2px rgb(7 10 25 / 20%);
+}
+
+.post-body p {
+  @apply mb-8 text-base md:text-lg lg:text-base xl:text-lg;
+}
+.post-body ul {
+  @apply mb-8;
+}
+.post-body li {
+  @apply mb-4 relative xs:pl-6 pl-8 sm:pl-10 text-base md:text-lg lg:text-base xl:text-lg;
+}
+
+.post-body li::before {
+  content: "";
+  @apply absolute top-2 left-3 sm:left-4 xs:left-2 w-1.5 h-1.5 rounded-full bg-[#65EBE7];
 }

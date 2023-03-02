@@ -33,16 +33,19 @@ const Tags = () => {
 
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10 mb-12">
             {posts.map((post, index) => (
-              <article key={`tag-post-${index}`} className="post bg-white p-8">
-                <div className="flex xs:flex-wrap sm:flex-nowrap xs:justify-center gap-y-4 gap-x-4 md:gap-x-6 mb-4 md:mb-8">
+              <article
+                key={`tag-post-${index}`}
+                className="post bg-white p-4 sm:p-8"
+              >
+                <div className="flex flex-wrap sm:flex-nowrap xs:justify-center gap-y-4 gap-x-4 md:gap-x-6 mb-4 md:mb-8">
                   <Link
                     to={`/posts/${post.url}`}
-                    className="xs:w-20 xs:h-20 w-[60px] h-[60px] md:w-[70px] md:h-[70px] flex-shrink-0"
+                    className="w-full sm:w-[70px] sm:h-[70px] flex-shrink-0"
                   >
                     <img
                       src={post.image}
                       alt={post.title}
-                      className="w-full h-full"
+                      className="w-full h-full object-cover"
                     />
                   </Link>
 
@@ -66,8 +69,8 @@ const Tags = () => {
                   </span>
                 </p>
 
-                <p className="text-[13px] md:text-base lg:text-sm xl:text-base mb-6 md:mb-12 text-center">
-                  {post.body.slice(0, 120) + "..."}
+                <p className="text-[13px] md:text-base lg:text-sm xl:text-base mb-6 md:mb-12 text-center line-clamp-6">
+                  {post.excerpt}
                 </p>
 
                 <div className="flex flex-wrap gap-4 items-center">
@@ -79,12 +82,12 @@ const Tags = () => {
 
                   <div className="flex items-center gap-x-2 ml-auto">
                     <img
-                      src={post.authorImg}
-                      alt={post.author}
+                      src={post.author.image}
+                      alt={post.author.name}
                       className="w-9 h-9 rounded-full"
                     />
                     <span className="text-xs lg:text-[15px] font-medium font-primary">
-                      {post.author}
+                      {post.author.name}
                     </span>
                   </div>
                 </div>

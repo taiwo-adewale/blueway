@@ -4,11 +4,9 @@ import { useSelector } from "react-redux";
 import { Header, Footer, ScrollToTop, Search } from "../components";
 import { RootState } from "../redux/store";
 
-const HeaderFooterWrap = (Component) =>
+const HeaderFooterWrap = (Component: React.ComponentType) =>
   function HOC() {
-    const { isNavMobile, isSearch } = useSelector(
-      (state: RootState) => state.state
-    );
+    const { isNavMobile } = useSelector((state: RootState) => state.state);
     return (
       <div
         className={`transition-all duration-300 ${
@@ -16,7 +14,7 @@ const HeaderFooterWrap = (Component) =>
         }`}
       >
         <Header />
-        {isSearch && <Search />}
+        <Search />
 
         <Component />
 

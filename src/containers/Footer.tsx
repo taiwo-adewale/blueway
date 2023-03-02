@@ -23,7 +23,7 @@ const Footer = () => {
                   <img
                     src={post.image}
                     alt={post.title}
-                    className="w-full h-full"
+                    className="w-full h-full object-cover"
                   />
                 </Link>
 
@@ -61,7 +61,7 @@ const Footer = () => {
           <div className="flex flex-col">
             <div className="flex flex-wrap sm:flex-nowrap gap-x-5 gap-y-3">
               <img
-                src={images.person01}
+                src={images.author01}
                 alt=""
                 className="w-20 h-20 rounded-full"
               />
@@ -97,9 +97,9 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-sm mt-4">
-              Hello! My name is Taiwo Adewale working from Chile. I create some
-              Ghost and Wordpress themes for differents markets, also, i offer
-              live support via our ticket system.
+              Hello! My name is Taiwo Adewale working from Nigeria. I create
+              websites for differents markets. Also, i offer live support via
+              our ticket system.
             </p>
           </div>
         </div>

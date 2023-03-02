@@ -8,6 +8,7 @@ module.exports = {
     },
     screens: {
       xs: { max: "339px" },
+      sm460: { max: "460px" },
       sm: "576px",
       md: "768px",
       lg: "1024px",
@@ -29,5 +30,5 @@ module.exports = {
       secondary: ["Source Serif Pro", "serif"],
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp")],
 };
