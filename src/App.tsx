@@ -11,12 +11,15 @@ const App = () => {
   );
 
   useEffect(() => {
+    const html = document.querySelector("html");
     const body = document.querySelector("body");
 
-    if (body) {
+    if (html && body) {
       if (isSearch || isNavMobile) {
+        html.classList.add("!overflow-hidden");
         body.classList.add("!overflow-hidden");
       } else {
+        html.classList.remove("!overflow-hidden");
         body.classList.remove("!overflow-hidden");
       }
     }
