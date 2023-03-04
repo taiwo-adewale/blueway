@@ -30,7 +30,7 @@ const Posts = () => {
           .map((post, index) => (
             <article
               key={`post-${index}`}
-              className="post bg-white px-6 pt-5 pb-10 md:px-12 md:pt-10 md:pb-14 w-full relative flex-col"
+              className="post bg-white sm:px-6 sm:pt-5 pb-10 md:px-12 md:pt-10 md:pb-14 w-full relative flex-col"
             >
               <div className="flex flex-wrap sm:flex-nowrap gap-y-4 gap-x-4 md:gap-x-6 mb-4 md:mb-8">
                 <Link
@@ -44,14 +44,14 @@ const Posts = () => {
                   />
                 </Link>
 
-                <div className="flex flex-col">
+                <div className="flex flex-col px-4 sm:px-0">
                   <Link
                     to={`/posts/${post.url}`}
-                    className="text-base md:text-[28px] xl:text-[30px] sm:mb-3 xl:text-4xl text-heading font-bold hover-underline !decoration-4 !leading-[1.3]"
+                    className="text-lg md:text-[28px] xl:text-[30px] mb-2 sm:mb-3 xl:text-4xl text-heading font-bold hover-underline !decoration-4 !leading-[1.3]"
                   >
                     {post.title}
                   </Link>
-                  <p className="flex flex-wrap items-center text-[15px] xl:text-base gap-x-3">
+                  <p className="flex flex-wrap items-center text-sm xl:text-base gap-x-3">
                     <span className="flex flex-wrap space-x-3 items-center">
                       <span>{post.date}</span>
                       <BsDashLg className="fill-primary" />
@@ -64,31 +64,33 @@ const Posts = () => {
                 </div>
               </div>
 
-              <p className="text-[13px] md:text-base lg:text-sm xl:text-[17px] mb-6 md:mb-12 !leading-[1.5]">
-                {post.excerpt}
-              </p>
+              <div className="flex flex-col px-4 sm:px-0">
+                <p className="text-[15px] line-clamp-5 md:line-clamp-3 md:text-base lg:text-sm xl:text-[17px] mb-6 md:mb-12 !leading-[1.5]">
+                  {post.excerpt}
+                </p>
 
-              <div className="flex justify-between items-center">
-                <div className="flex flex-wrap gap-x-2 gap-y-1.5">
-                  {post.tags.map((tag) => (
-                    <Tag
-                      key={`post-${index}-${tag.tag}`}
-                      tagName={tag.tag}
-                      tagColor={tag.color}
-                      tagUrl={tag.url}
+                <div className="flex justify-between items-center">
+                  <div className="flex flex-wrap gap-x-2 gap-y-1.5">
+                    {post.tags.map((tag) => (
+                      <Tag
+                        key={`post-${index}-${tag.tag}`}
+                        tagName={tag.tag}
+                        tagColor={tag.color}
+                        tagUrl={tag.url}
+                      />
+                    ))}
+                  </div>
+
+                  <div className="hidden md:flex items-center gap-x-2">
+                    <img
+                      src={post.author.image}
+                      alt={post.author.name}
+                      className="w-9 h-9 rounded-full"
                     />
-                  ))}
-                </div>
-
-                <div className="hidden md:flex items-center gap-x-2">
-                  <img
-                    src={post.author.image}
-                    alt={post.author.name}
-                    className="w-9 h-9 rounded-full"
-                  />
-                  <span className="text-xs lg:text-[15px] font-medium font-primary">
-                    {post.author.name}
-                  </span>
+                    <span className="text-xs lg:text-[15px] font-medium font-primary">
+                      {post.author.name}
+                    </span>
+                  </div>
                 </div>
               </div>
 

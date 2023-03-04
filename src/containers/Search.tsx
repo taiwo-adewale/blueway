@@ -19,8 +19,10 @@ const Search = () => {
   useEffect(() => {
     if (!inputRef.current) throw Error("inputRef is not assigned");
 
-    inputRef.current.focus();
-  }, []);
+    if (isSearch) {
+      inputRef.current.focus();
+    }
+  }, [isSearch]);
 
   useEffect(() => {
     const handleEscPress = (e: KeyboardEvent) => {
@@ -96,7 +98,7 @@ const Search = () => {
                     key={`search-result-${index}`}
                     className="flex flex-col"
                   >
-                    <Link to={`/posts/${post.url}`}>
+                    <Link onClick={handleCloseSearch} to={`/posts/${post.url}`}>
                       <img
                         src={post.image}
                         alt={post.title}
@@ -105,6 +107,7 @@ const Search = () => {
                     </Link>
 
                     <Link
+                      onClick={handleCloseSearch}
                       to={`/posts/${post.url}`}
                       className="text-sm pb-1 !text-left text-heading font-bold hover-underline !decoration-2"
                     >

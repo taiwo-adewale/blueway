@@ -8,9 +8,9 @@ const HeaderFooterWrap = (Component: React.ComponentType) =>
   function HOC() {
     const { isNavMobile } = useSelector((state: RootState) => state.state);
     return (
-      <div
-        className={`transition-all duration-300 ${
-          isNavMobile ? "translate-x-[300px] xl:translate-x-0" : ""
+      <main
+        className={`transition-all duration-300 relative ${
+          isNavMobile ? "left-[300px] xl:left-0" : "left-0"
         }`}
       >
         <Header />
@@ -20,7 +20,7 @@ const HeaderFooterWrap = (Component: React.ComponentType) =>
 
         <Footer />
         <ScrollToTop />
-      </div>
+      </main>
     );
   };
 

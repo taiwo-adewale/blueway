@@ -1,14 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
 
 import { NavMobile, ButtonLink } from "../components";
 import { links } from "../data";
-import { RootState } from "../redux/store";
 
 const Navbar = () => {
-  const { isNavMobile } = useSelector((state: RootState) => state.state);
-
   return (
     <>
       <nav className="navbar hidden bg-white p-4 xl:flex gap-x-6">
@@ -36,7 +32,7 @@ const Navbar = () => {
         </ButtonLink>
       </nav>
 
-      {isNavMobile && <NavMobile />}
+      <NavMobile />
     </>
   );
 };

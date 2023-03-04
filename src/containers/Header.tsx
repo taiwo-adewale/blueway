@@ -10,7 +10,7 @@ const Header = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="container">
+    <header className="container">
       <div className="flex flex-col xl:gap-y-10 pt-2 md:pt-6 xl:pt-16">
         <div className="flex flex-wrap items-center py-2 justify-between md:justify-center">
           <div className="md:w-1/3">
@@ -46,7 +46,7 @@ const Header = () => {
           <Navbar />
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

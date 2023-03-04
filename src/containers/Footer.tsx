@@ -8,7 +8,7 @@ import { posts } from "../data";
 
 const Footer = () => {
   return (
-    <div className="px-6 md:px-12 mx-auto max-w-[1400px]">
+    <footer className="px-6 md:px-12 mx-auto max-w-[1400px]">
       <div className="grid md:grid-cols-2 xl:grid-cols-4 mb-10 sm:mb-[50px] mt-[70px] gap-[70px]">
         <div>
           <SectionTitle title="Latest Articles" />
@@ -150,7 +150,7 @@ const Footer = () => {
           </a>
         </p>
       </div>
-    </div>
+    </footer>
   );
 };
 

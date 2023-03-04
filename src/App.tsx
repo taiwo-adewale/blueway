@@ -15,9 +15,9 @@ const App = () => {
 
     if (body) {
       if (isSearch || isNavMobile) {
-        body.style.overflow = "hidden";
+        body.classList.add("!overflow-hidden");
       } else {
-        body.style.overflow = "auto";
+        body.classList.remove("!overflow-hidden");
       }
     }
   }, [isSearch, isNavMobile]);
