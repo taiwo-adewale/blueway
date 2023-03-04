@@ -66,7 +66,7 @@ const Post = () => {
               alt={post.title}
               className="w-full min-h-[250px] object-cover"
             />
-            <div className="xs:px-4 px-[30px] sm:px-[60px] py-[50px] bg-white mb-14 post">
+            <div className="xs:px-4 px-4 sm:px-10 py-[50px] bg-white mb-14 post">
               <div>
                 <div className="text-center">
                   <h2 className="font-bold text-2xl md:text-3xl lg:text-2xl xl:text-3xl mb-5">
