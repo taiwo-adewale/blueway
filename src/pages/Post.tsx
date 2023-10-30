@@ -44,7 +44,7 @@ const Post = () => {
 
   const handleCopyToClipboard = () => {
     navigator.clipboard.writeText(
-      `https://blueway-wale.netlify.app/posts/${postUrl}`
+      `https://blueway01.netlify.app/posts/${postUrl}`
     );
     setAlertActive(true);
     setTimeout(() => setAlertActive(false), 2000);
@@ -142,7 +142,7 @@ const Post = () => {
               </div>
 
               <div className="relative pl-6 pr-12 sm:pr-16 py-3 text-center linkSpan-copy bg-mainBg w-full text-sm md:text-base tracking-normal mb-12 break-all">
-                {`https://blueway-wale.netlify.app/posts/${postUrl}`}
+                {`https://blueway01.netlify.app/posts/${postUrl}`}
                 <BiCopy
                   onClick={handleCopyToClipboard}
                   className="fill-primary text-xl absolute top-1/2 -translate-y-1/2 right-4 sm:right-8 cursor-pointer"
